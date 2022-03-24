@@ -1,0 +1,228 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Flutter Installation on Windows Using Chocolatey</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelab-flutter-installation-windows"
+                  title="Flutter Installation on Windows Using Chocolatey"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="About this Codelab" duration="1">
+        <p><strong><em>Jumail (jumail@utm.my) | SECJ3623 Mobile Application Programming | March 23, 2022</em></strong></p>
+<p>This codelab will walk you through about how to setup your machine for Flutter development. We are going to use a command-line installations using <code>Chocolatey</code>, an installation Manager for Windows.</p>
+<aside class="warning"><p>The installation is only for Windows machine</p>
+</aside>
+<aside class="special"><ul>
+<li>Prepared by: Jumail (jumail@utm.my)</li>
+<li>for the course: SECJ3623 Mobile Application Programming</li>
+<li>Date: March 23, 2022</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Chocolatey" duration="1">
+        <p><code>Chocolatey</code> is a third-party tool. So we need to install it first.</p>
+<h2 is-upgraded>Open a Poweshell Terminal as <code>Administrator</code></h2>
+<ul>
+<li><code>Right click</code> the Windows Icon.<img alt="Windows Icon" src="img\\784bfc70cc7e235a.png"> to open Windows menu.</li>
+<li>Click on <code>Windows Powershell(Admin)</code></li>
+</ul>
+<p class="image-container"><img alt="Windows Icon" src="img\\e46cc2316257d8d7.png"></p>
+<h2 is-upgraded>Install Chocolatey</h2>
+<ul>
+<li>In the Powershell Terminal, run the following commands:<pre><code language="language-powershell" class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</code></pre>
+</li>
+<li>Test chocolatey installation<pre><code language="language-powershell" class="language-powershell">choco --version
+
+# If the chocolatey successfully installed, you should see the version.
+</code></pre>
+</li>
+</ul>
+<h2 is-upgraded>Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/install" target="_blank">Chocolatey Installation</a></li>
+<li><a href="https://community.chocolatey.org/packages" target="_blank">Find Package on Chocolatey</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Softwares" duration="12">
+        <p>In this step, we are going to install the following softwares:</p>
+<ul>
+<li>Visual Studio Code  <em>(Code Editor)</em></li>
+<li>Git  <em>(Source Code Versioning Tool)</em></li>
+<li>Flutter <em>(The SDK)</em></li>
+<li>Android Studio <em>(To be used only for SDK Manager and AVD Manager)</em></li>
+</ul>
+<aside class="warning"><p> We are going to install them all at once. This step will take some times. </p>
+</aside>
+<pre><code language="language-powershell" class="language-powershell">choco install vscode git flutter androidstudio -y
+</code></pre>
+<aside class="warning"><h2 is-upgraded>Open A New Powershell Session</h2>
+<p>The above installations may have changed the <code>Environement Variables</code> of your system such as the <code>PATH</code>. To allow the changes to take effect, open a new powershell session.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of VS Code Extenstions" duration="2">
+        <p>In this step onwards, you are expected to work on the newly opened Powershell terminal. You can install VS Code Extensions from the VS Code. However, in this step we are going to do that using command-line in powershell terminal.</p>
+<h2 is-upgraded>Extenstions to install</h2>
+<ul>
+<li><img alt="VSCode-Ext" src="img\\dbb493aed7bec7db.png">  Flutter</li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share <em>(for collaborative coding)</em></li>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens <em>(Show error at coding-time)</em></li>
+<li><img alt="VSCode-Ext" src="img\\960a83a3cce1a3f2.png">  Pubspec Assist <em>(install package in flutter project pubspec.yaml)</em></li>
+<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize <em>(add semicolon)</em></li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments <em>(comments with colors)</em></li>
+<li><img alt="VSCode-Ext" src="img\\24674de6aefe0c17.png">  Firebase</li>
+<li><img alt="VSCode-Ext" src="img\\8ce560ed880ec177.png">  REST Client <em>(like &#34;Postman&#34; tool)</em></li>
+<li><img alt="VSCode-Ext" src="img\\339ac45562ef0cfd.png">  Peacock</li>
+</ul>
+<p>Run the following commands in Powershell one line at a time.</p>
+<pre><code language="language-powershell" class="language-powershell"> # Flutter
+ code --install-extension Dart-Code.flutter
+
+ # Live Share
+ code --install-extension ms-vsliveshare.vsliveshare
+
+ # Error Lens
+ code --install-extension PhilHindle.errorlens
+ 
+ # Pubspec Assist
+ code --install-extension jeroen-meijer.pubspec-assist
+
+ # Colonize
+ code --install-extension vmsynkov.colonize
+
+ # Better Comments
+ code --install-extension aaron-bond.better-comments
+
+ # Firebase
+ code --install-extension toba.vsfire
+
+ # Rest Client
+ code --install-extension humao.rest-client
+
+ # Peacock
+ code --install-extension johnpapa.vscode-peacock
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Finalize the Installations of Flutter SDK and Android SDK" duration="8">
+        <h2 is-upgraded>Upgrade Flutter SDK</h2>
+<p>In this step onwards, continue working on the new Powershell terminal.</p>
+<p>Flutter SDK version from the chocolatey repository might not be the latest. So, upgrade now by running the following comamnd.</p>
+<pre><code language="language-powershell" class="language-powershell">flutter upgrade
+</code></pre>
+<h2 is-upgraded>Diagnos the Fluter Installation</h2>
+<p>Run the following command to inspect your installation.</p>
+<pre><code language="language-powershell" class="language-powershell"> flutter doctor
+</code></pre>
+<aside class="warning"><p> You may get some problems with your installation. Fix them according the recommendation shown from the previous command. </p>
+</aside>
+<h2 is-upgraded>Fixing Problem: Unable to Locate Android SDK (under Android toolchain - develop for Android Devices)</h2>
+<ul>
+<li>Install Android Studio from: <a href="https://developer.android.com/studio/index.html" target="_blank">https://developer.android.com/studio/index.html</a></li>
+<li>On first launch it will assist you in installing the Android SDK components. (or visit <a href="%5Bhttps://flutter.dev/docs/get-started/install/windows#android-setup%5D" target="_blank">https://flutter.dev/docs/get-started/install/windows#android-setup</a> for detailed instructions).</li>
+<li>If the Android SDK has been installed to a custom location, please use <code>flutter config --android-sdk</code> to update to that location.</li>
+</ul>
+<h2 is-upgraded>Fixing Problem: Cannot find Chrome</h2>
+<p>The problem can be fixed by installing Chrome Web Browser.</p>
+<pre><code language="language-powershell" class="language-powershell"> # Install Chrome Web Browser
+ choco install googlechrome -y
+
+ # To install Edge Web Browser
+ #  choco install microsoft-edge -y
+</code></pre>
+<aside class="warning"><p>To run <code>flutter doctor</code> again, you should open a new powershell session.</p>
+</aside>
+<aside class="special"><ul>
+<li>Web browser (Chrome or Edge) is required if you want to test out your app on web rather than on Android emulators.</li>
+<li>If you prefer to use Edge browser and already installed it on your computer, <code>flutter doctor</code> may still show you the same problem above. You can simply ignore the problem.</li>
+</ul>
+</aside>
+<h2 is-upgraded>Fixing Problem: Visual Studio not installed</h2>
+<ul>
+<li>Download at <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">https://visualstudio.microsoft.com/downloads/</a>.</li>
+<li>Please install the <code>"Desktop development with C++"</code> workload, including all of its default components</li>
+</ul>
+<aside class="special"><p>This is required if you want to test out your app on Windows native. It is fine to simply ignore the above problem since you can test out your app on Android emulators or Web.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Test Run" duration="5">
+        <h2 is-upgraded>Create a New Project</h2>
+<p>You can create a new project in VS Code. However, in this step we are going to do it using <code>flutter</code> command-line. Run the following commands in the powershell terminal.</p>
+<pre><code language="language-powershell" class="language-powershell"> 
+ # Create a new flutter project
+  flutter create project1
+
+ # Open the project into vs code
+ code project1
+</code></pre>
+<h2 is-upgraded>Test Run on Web</h2>
+<ul>
+<li>Here, you are suppose in VS Code now.</li>
+<li>Select &#34;Chrome&#34; or &#34;Edge&#34; as the device to run on</li>
+<li>Click on the <code>Run and Debug</code> button and Choose <code>Dart & Flutter</code> as the environment.</li>
+</ul>
+<p class="image-container"><img alt="Test-run" src="img\\764f7f3ee706992.jpg"></p>
+<p>You should get the following app</p>
+<p class="image-container"><img alt="Output" src="img\\6a452b153eff55a6.jpg"></p>
+<h2 is-upgraded>Test Run on Android Emulator</h2>
+<aside class="special"><p>Make sure you have setup Android SDK and Create an emulator on your machine. Refer to Step 5</p>
+</aside>
+<ul>
+<li>Select &#34;Android Emulator&#34; as the device to run on</li>
+<li>Click on the <code>Run and Debug</code></li>
+</ul>
+<h2 is-upgraded>Test Run on Windows Desktop</h2>
+<aside class="special"><p>Make sure you have installed Visual Studio and set it up to create Windows application. Refer to Step 5.</p>
+</aside>
+<ul>
+<li>Select &#34;Windows&#34; as the device to run on</li>
+<li>Click on the <code>Run and Debug</code></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

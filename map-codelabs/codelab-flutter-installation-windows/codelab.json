@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-03-24T09:11:40+08:00",
+  "id": "codelab-flutter-installation-windows",
+  "duration": 29,
+  "title": "Flutter Installation on Windows Using Chocolatey",
+  "summary": "Flutter Installation",
+  "source": "codelab_flutter_installation.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "codelab-flutter-installation-windows"
+}
