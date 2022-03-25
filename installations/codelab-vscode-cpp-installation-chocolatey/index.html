@@ -1,0 +1,176 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Install VS Code for C&#43;&#43; Programming with Chocolatey Installation Manager</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelab-vscode-cpp-installation-chocolatey"
+                  title="Install VS Code for C&#43;&#43; Programming with Chocolatey Installation Manager"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="About this Codelab" duration="1">
+        <p><strong><em>Jumail (jumail@utm.my) | SECJ3623 Mobile Application Programming | March 23, 2022</em></strong></p>
+<p>This codelab will walk you through how to setup Visual Studio Code for C++ Programming using the <code>Chocolatey</code> installation manager. You will be installing the followings:</p>
+<ul>
+<li>MS Visual Studio Code (the source code editor)</li>
+<li>C/C++ VS Code extension by Microsoft (for C/C++ IntelliSense, debugging, and code browsing). This extension is compulsory.</li>
+<li>Some other VS Code extensions, such as Colonize, Rainbow Bracket, etc). These are optional.</li>
+<li>MinGW (Compiling and debugging tools, i.e., gcc / g++ and gdb). It supports both 64-bit and 32-bit addressing.</li>
+</ul>
+<aside class="warning"><p>The installation is only for Windows machine</p>
+</aside>
+<aside class="special"><ul>
+<li>Prepared by: Jumail (jumail@utm.my)</li>
+<li>for the course: Programming Technique I and II</li>
+<li>Date: March 25, 2022</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Chocolatey" duration="1">
+        <p><code>Chocolatey</code> is a third-party tool. So we need to install it first.</p>
+<h2 is-upgraded>Open a Poweshell Terminal as <code>Administrator</code></h2>
+<ul>
+<li><code>Right click</code> the Windows Icon.<img alt="Windows Icon" src="img\\784bfc70cc7e235a.png"> to open Windows menu.</li>
+<li>Click on <code>Windows Powershell(Admin)</code></li>
+</ul>
+<p class="image-container"><img alt="Windows Icon" src="img\\e46cc2316257d8d7.png"></p>
+<h2 is-upgraded>Install Chocolatey</h2>
+<ul>
+<li>In the Powershell Terminal, run the following commands:<pre><code language="language-powershell" class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</code></pre>
+</li>
+<li>Test chocolatey installation<pre><code language="language-powershell" class="language-powershell">choco --version
+
+# If the chocolatey successfully installed, you should see the version.
+</code></pre>
+</li>
+</ul>
+<h2 is-upgraded>Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/install" target="_blank">Chocolatey Installation</a></li>
+<li><a href="https://community.chocolatey.org/packages" target="_blank">Find Package on Chocolatey</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Softwares" duration="12">
+        <p>In this step, we are going to install the following softwares:</p>
+<ul>
+<li>Visual Studio Code  <em>(Code Editor)</em></li>
+<li>MingGW <em>(for C++ compiler and debugger)</em></li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell">choco install vscode mingw -y
+</code></pre>
+<aside class="warning"><h2 is-upgraded>Open A New Powershell Session</h2>
+<p>The above installations may have changed the <code>Environement Variables</code> of your system such as the <code>PATH</code>. To allow the changes to take effect, open a new powershell session.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of VS Code Extenstions" duration="2">
+        <p>In this step onwards, you are expected to work on the newly opened Powershell terminal. You can install VS Code Extensions from the VS Code. However, in this step we are going to do that using command-line in powershell terminal.</p>
+<h2 is-upgraded>Extenstions to install</h2>
+<ul>
+<li><img alt="VSCode-Ext" src="img\\505fc67413bfd44.jpg">  C/C++</li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share <em>(for collaborative coding)</em></li>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens <em>(Show error at coding-time)</em></li>
+<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize <em>(add semicolon)</em></li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments <em>(comments with colors)</em></li>
+</ul>
+<p>Run the following commands in Powershell one line at a time.</p>
+<pre><code language="language-powershell" class="language-powershell"> # C/C++
+ code --install-extension ms-vscode.cpptools
+
+ # Live Share
+ code --install-extension ms-vsliveshare.vsliveshare
+
+ # Error Lens
+ code --install-extension PhilHindle.errorlens
+ 
+ # Colonize
+ code --install-extension vmsynkov.colonize
+
+ # Better Comments
+ code --install-extension aaron-bond.better-comments
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Test Run" duration="1">
+        <ul>
+<li>Download sample programs:<ul>
+<li><a href="download/vscode-cpp-samples.zip" target="_blank">Sample Programs</a></li>
+<li>Extract the zip file into any folder.</li>
+<li>Launch VS Code from the Start Menu</li>
+</ul>
+</li>
+<li>In Windows Explorer, drag the folder <code>single-file-programs</code> into VS Code, (or right click the folder and click on the menu <code>Open with VS Code</code>)</li>
+<li>In VS Code, open the program  <code>console_example.cpp</code>.</li>
+</ul>
+<p class="image-container"><img alt="Open program" src="img\\1b27fe52b6107ac.jpg"></p>
+<ul>
+<li>Choose Run and Debug: <code>Console Program</code>.cpp`.</li>
+</ul>
+<p class="image-container"><img alt="Run program" src="img\\d96e77e454b1bbb9.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Types of Projects" duration="1">
+        <p>When working with VS Code, you always want to work in a folder. You may have:</p>
+<ul>
+<li>a folder containing one or more programs. I call this type of program, single-file programs. That means, you write all your code in a single .cpp file for each program.  To run such a program, use the Run and Debug:  <code>"Console Program"</code>.</li>
+<li>a folder dedicated to a program.  This configuration you want to use for your project. You structure your program in a folder and it contains all the .cpp, .hpp. To run this type of program, use the Run and Debug:  <code>"Multi-file Console Project"</code>.</li>
+</ul>
+<p class="image-container"><img alt="Types of run and debug" src="img\\6ca82701656a9c2a.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating New Projects" duration="1">
+        <ul>
+<li>Create a new folder (in Windows File Explorer) . Let&#39;s call this folder, <code>program1</code>.</li>
+<li>Copy vscode setting folder (i.e.,  .vscode ) from any of your existing project (for example from the provided sample program) to the new folder <code>program1</code>.</li>
+<li>Open the folder <code>program1</code>  into a VS Code instance.</li>
+<li>Now, you can proceed adding your source code files .cpp, etc.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
