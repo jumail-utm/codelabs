@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-04-15T23:20:01+08:00",
+  "id": "codelab-vscode-java-installation-windows",
+  "duration": 18,
+  "title": "Install VS Code for Java Programming (on Windows)",
+  "summary": "Installing Visual Studio Code for Java Programming (on Windows)",
+  "source": "codelab-vscode-java-install-windows.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "codelab-vscode-java-installation-windows"
+}
