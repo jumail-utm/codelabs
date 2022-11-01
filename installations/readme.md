@@ -1,3 +1,4 @@
 - [Install VS Code for C++ Programming on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-cpp-installation-chocolatey)
 - [Flutter Installation on Windows using Chocolatey](https://jumail-utm.github.io/codelabs/installations/codelab-flutter-installation-windows)
 - [Install VS Code for Java Programming on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-java-installation-windows)
+- [Install VS Code and OpenCV for Pythonon Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-opencv-python-installation-windows)
