@@ -1,0 +1,180 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Install VS Code for OpenCV and Python Programming (on Windows)</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelab-vscode-opencv-python-installation-windows"
+                  title="Install VS Code for OpenCV and Python Programming (on Windows)"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="About this Codelab" duration="1">
+        <p><strong><em>Jumail (jumail@utm.my) | October 25, 2022</em></strong></p>
+<p>This codelab will walk you through how to setup Visual Studio Code for OpenCV and Python  Programming using the <code>Chocolatey</code> installation manager. You will be installing the followings:</p>
+<ul>
+<li>MS Visual Studio Code (the code editor)</li>
+<li>Python (the interpreter)</li>
+<li>OpenCV package for Python (the library for Computer Vision)</li>
+<li>VS Code Extension for Python (for python programming in VS Code)</li>
+<li>VS Code Extension for Jupyter Notebook (for interactive document)</li>
+<li>Some other VS Code extensions, such as Error Lens, Better Comments, etc). They are optional, but it is good to have (for better coding experience in VS Code).</li>
+</ul>
+<aside class="warning"><p>This installation is only for Windows machine.</p>
+</aside>
+<aside class="special"><ul>
+<li>Prepared by: Jumail (jumail@utm.my)</li>
+<li>for the course: Fundamental of Image Processing</li>
+<li>Date: October 25, 2022</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Chocolatey" duration="1">
+        <p><code>Chocolatey</code> is a third-party installation manager tool for Windows. So we need to install it first.</p>
+<h2 is-upgraded>Open a Poweshell Terminal as <code>Administrator</code></h2>
+<ul>
+<li><code>Right click</code> the Windows Icon.<img alt="Windows Icon" src="img\\784bfc70cc7e235a.png"> to open Windows menu.</li>
+<li>Click on <code>Windows Powershell(Admin)</code></li>
+</ul>
+<p class="image-container"><img alt="Windows Icon" src="img\\e46cc2316257d8d7.png"></p>
+<h2 is-upgraded>Install Chocolatey</h2>
+<ul>
+<li>In the Powershell Terminal, run the following commands:<pre><code language="language-powershell" class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</code></pre>
+</li>
+<li>Test chocolatey installation<pre><code language="language-powershell" class="language-powershell">choco --version
+
+# If the chocolatey successfully installed, you should see the version.
+</code></pre>
+</li>
+</ul>
+<h2 is-upgraded>Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/install" target="_blank">Chocolatey Installation</a></li>
+<li><a href="https://community.chocolatey.org/packages" target="_blank">Find Package on Chocolatey</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Softwares" duration="12">
+        <p>In this step, we are going to install the following softwares:</p>
+<ul>
+<li>VS Code</li>
+<li>Python</li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell">choco install vscode python -y
+</code></pre>
+<aside class="warning"><h2 is-upgraded>Open A New Powershell Session</h2>
+<p>The above installations may have changed the <code>Environement Variables</code> of your system such as the <code>PATH</code>. To allow the changes to take effect, open a new powershell session. Then in the following steps, you should work on the new powershell terminal.</p>
+</aside>
+<h2 is-upgraded>Test Python installation</h2>
+<pre><code language="language-powershell" class="language-powershell">python --version
+
+# If python has been successfully installed, you should see the version.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of OpenCV package for Python Programming" duration="2">
+        <p>In this step onwards, you are expected to work on the newly opened Powershell terminal. Run the following command in Powershell terminal</p>
+<pre><code language="language-powershell" class="language-powershell">pip install  opencv-contrib-python
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of VS Code Extenstions" duration="2">
+        <p>You can install VS Code Extensions from the VS Code. However, in this step we are going to do that using command-line in powershell terminal.</p>
+<h2 is-upgraded>Extenstions to install</h2>
+<ul>
+<li><img alt="VSCode-Ext" src="img\\54e28491a42bb54b.jpg">  Extension for Python</li>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens <em>(Show error at coding-time)</em></li>
+<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize <em>(add semicolon)</em></li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments <em>(comments with colors)</em></li>
+<li><img alt="VSCode-Ext" src="img\\22b0c2731e807a5b.png">  Path Intellisense <em>(Filename autocomplete)</em></li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share <em>(for collaborative coding)</em> Run the following commands in Powershell one line at a time.</li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell"> # Python
+ code --install-extension ms-python.python
+
+  # Error Lens
+ code --install-extension PhilHindle.errorlens
+ 
+ # Colonize
+ code --install-extension vmsynkov.colonize
+
+ # Better Comments
+ code --install-extension aaron-bond.better-comments
+
+ # Path Intellisense
+ code --install-extension christian-kohler.path-intellisense
+
+ # Live Share
+ code --install-extension ms-vsliveshare.vsliveshare
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Testing the Installation" duration="2">
+        <ul>
+<li>Download the sample program (a zip file) and extract it into a folder in your computer.</li>
+</ul>
+<p><a href="https://drive.google.com/file/d/1Shl-sFw8AkEBrnautdJgpd-RYoAKc9lz" target="_blank">Download test program</a></p>
+<ul>
+<li>Launch VS Code. You can do this from powershell terminal, type the following command:</li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell">code
+</code></pre>
+<ul>
+<li>Open the folder into VS Code (from the menu <code>File -> Open Folder</code>, or press <code>Ctrl K O</code>)</li>
+</ul>
+<p class="image-container"><img alt="Open folder" src="img\\357747f1336e1ee0.jpg"></p>
+<p class="image-container"><img alt="Select folder" src="img\\86f261c6703e5d72.jpg"></p>
+<ul>
+<li>Open the sample python program (<code>test_installation.py</code>) and run it.</li>
+</ul>
+<p class="image-container"><img alt="Open test program file" src="img\\4746daf63e4b5161.jpg"></p>
+<p class="image-container"><img alt="Run Program" src="img\\b006ebef086a592f.jpg"></p>
+<aside class="special"><p>You should see the output in another window.</p>
+</aside>
+<p class="image-container"><img alt="Expected output" src="img\\b0587defd8d15c50.jpg"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
