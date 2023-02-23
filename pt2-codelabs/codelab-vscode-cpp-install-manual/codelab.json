@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-03-18T17:26:07+08:00",
+  "updated": "2023-02-23T15:54:51+08:00",
   "id": "codelab-vscode-cpp-install-manual",
   "duration": 12,
   "title": "Install VS Code for C++ Programming (Manual Installation)",
   "summary": "Installing Visual Studio Code for C++ Programming (Manual Installation)",
-  "source": "codelab_manual_install.md",
+  "source": ".\\codelab_vscode-cpp_manual_install.md",
   "theme": "",
   "status": [
     "published"
