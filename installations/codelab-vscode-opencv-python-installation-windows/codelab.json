@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-11-02T07:34:19+08:00",
+  "updated": "2023-02-23T16:04:19+08:00",
   "id": "codelab-vscode-opencv-python-installation-windows",
   "duration": 20,
   "title": "Install VS Code for OpenCV and Python Programming (on Windows)",
   "summary": "Installing Visual Studio Code for OpenCV and Python (on Windows)",
-  "source": "codelab-vscode-opencv-python-install-windows.md",
+  "source": ".\\codelab-vscode-opencv-python-install-windows.md",
   "theme": "",
   "status": [
     "published"
