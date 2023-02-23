@@ -1,4 +1,4 @@
-- [Install VS Code for C++ Programming on Windows (install this if you are going to use WinBGIm library for graphic program)](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-cpp-installation-manual)
+- [Install VS Code for C++ Programming on Windows (install this if you are going to use WinBGIm library for graphic program)](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-cpp-install-manual)
 - [Install VS Code for C++ Programming on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-cpp-installation-chocolatey)
 - [Flutter Installation on Windows using Chocolatey](https://jumail-utm.github.io/codelabs/installations/codelab-flutter-installation-windows)
 - [Install VS Code for Java Programming on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-java-installation-windows)
