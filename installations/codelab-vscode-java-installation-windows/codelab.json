@@ -8,7 +8,7 @@
   "duration": 18,
   "title": "Install VS Code for Java Programming (on Windows)",
   "summary": "Installing Visual Studio Code for Java Programming (on Windows)",
-  "source": "codelab-vscode-java-install-windows.md",
+  "source": ".\\codelab-vscode-java-install-windows.md",
   "theme": "",
   "status": [
     "published"
