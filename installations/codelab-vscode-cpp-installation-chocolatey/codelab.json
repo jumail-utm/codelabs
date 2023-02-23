@@ -8,7 +8,7 @@
   "duration": 19,
   "title": "Install VS Code for C++ Programming with Chocolatey Installation Manager",
   "summary": "Installing Visual Studio Code for C++ Programming (with Chocolatey Instalation Manager)",
-  "source": "codelab_vscode-cpp_chocolatey_install.md",
+  "source": ".\\codelab_vscode-cpp_chocolatey_install.md",
   "theme": "",
   "status": [
     "published"
