@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2023-09-24T18:33:05+08:00",
+  "id": "codelab-vscode-java_spring-installation-windows",
+  "duration": 18,
+  "title": "Install VS Code for Java Programming with Spring Framework (on Windows)",
+  "summary": "Installing Visual Studio Code for Java Programming with Spring Framework (on Windows)",
+  "source": "codelab-vscode-java_spring-installation-windows.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "codelab-vscode-java_spring-installation-windows"
+}

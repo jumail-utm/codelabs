@@ -1,0 +1,159 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Install VS Code for Java Programming with Spring Framework (on Windows)</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelab-vscode-java_spring-installation-windows"
+                  title="Install VS Code for Java Programming with Spring Framework (on Windows)"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="About this Codelab" duration="1">
+        <p><strong><em>Jumail (jumail@utm.my) | April 15, 2022</em></strong></p>
+<p>This codelab will walk you through how to setup Visual Studio Code for Spring Framework using the <code>Chocolatey</code> installation manager. You will be installing the followings:</p>
+<ul>
+<li>OpenJDK (for Programming language)</li>
+<li>MS Visual Studio Code (the source code editor)</li>
+<li>VS Code Extension Pack for Java and Spring Tools.</li>
+<li>Some other VS Code extensions, such as Colonize, Rainbow Bracket, etc). They are optional, but it is good to have (for better coding experience in VS Code).</li>
+</ul>
+<aside class="warning"><p>This installation is only for Windows machine.</p>
+</aside>
+<aside class="special"><ul>
+<li>Prepared by: Jumail (jumail@utm.my)</li>
+<li>for the course: Internet Programming</li>
+<li>Date: September 24, 2023</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Chocolatey" duration="1">
+        <p><code>Chocolatey</code> is a third-party installation manager tool for Windows. So we need to install it first.</p>
+<h2 is-upgraded>Open a Poweshell Terminal as <code>Administrator</code></h2>
+<ul>
+<li><code>Right click</code> the Windows Icon.<img alt="Windows Icon" src="img\\784bfc70cc7e235a.png"> to open Windows menu.</li>
+<li>Click on <code>Windows Powershell(Admin)</code></li>
+</ul>
+<p class="image-container"><img alt="Windows Icon" src="img\\e46cc2316257d8d7.png"></p>
+<h2 is-upgraded>Install Chocolatey</h2>
+<ul>
+<li>In the Powershell Terminal, run the following commands:<pre><code language="language-powershell" class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</code></pre>
+</li>
+<li>Test chocolatey installation<pre><code language="language-powershell" class="language-powershell">choco --version
+
+# If the chocolatey successfully installed, you should see the version.
+</code></pre>
+</li>
+</ul>
+<h2 is-upgraded>Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/install" target="_blank">Chocolatey Installation</a></li>
+<li><a href="https://community.chocolatey.org/packages" target="_blank">Find Package on Chocolatey</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Softwares" duration="12">
+        <p>In this step, we are going to install the following softwares:</p>
+<ul>
+<li>Oracle OpenJDK <em>(for Java Development)</em></li>
+<li>Visual Studio Code  <em>(Code Editor)</em></li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell">choco install oraclejdk  vscode -y
+</code></pre>
+<aside class="warning"><h2 is-upgraded>Open A New Powershell Session</h2>
+<p>The above installations may have changed the <code>Environement Variables</code> of your system such as the <code>PATH</code>. To allow the changes to take effect, open a new powershell session. Then in the following steps, you should work on the new powershell terminal.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of VS Code Extenstions" duration="2">
+        <p>In this step onwards, you are expected to work on the newly opened Powershell terminal. You can install VS Code Extensions from the VS Code. However, in this step we are going to do that using command-line in powershell terminal.</p>
+<h2 is-upgraded>Extenstions to install</h2>
+<ul>
+<li><img alt="VSCode-Ext" src="img\\a743cee7b8662c6d.jpg">  Java Extension Pack</li>
+<li><img alt="VSCode-Ext" src="img\\d1a9bc5af2584252.jpg">  Spring Boot Extension Pack</li>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens <em>(Show errors at coding-time)</em></li>
+<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize <em>(add semicolon)</em></li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments <em>(comments with colors)</em></li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share <em>(for collaborative coding)</em></li>
+</ul>
+<p>Run the following commands in Powershell one line at a time.</p>
+<pre><code language="language-powershell" class="language-powershell"> # Java Extension Pack
+ code --install-extension vscjava.vscode-java-pack
+ 
+ # Spring Boot Extension Pack
+ code --install-extension vmware.vscode-boot-dev-pack
+
+
+ # Error Lens
+ code --install-extension PhilHindle.errorlens
+ 
+ # Colonize
+ code --install-extension vmsynkov.colonize
+
+ # Better Comments
+ code --install-extension aaron-bond.better-comments
+
+ # Live Share
+ code --install-extension ms-vsliveshare.vsliveshare
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create Project and Test Run" duration="2">
+        <ul>
+<li>Launch VS Code. You can do this from powershell terminal, type the following command:</li>
+</ul>
+<pre><code language="language-powershell" class="language-powershell">code
+</code></pre>
+<ul>
+<li>In VS Code, open the <code>Command Palette</code> by pressing the key <code>Ctrl Shift P</code></li>
+<li>In the text bar search for <code>Java: Create Java Project...</code><img alt="Open command palette" src="img\\d3884696f49e4580.jpg"></li>
+<li>Select the project type as <code>No build tools</code><img alt="Select Project Type" src="img\\9f84480b969344a3.jpg"></li>
+<li>Select the project folder (i.e. where you want to save the project) <img alt="Select Project Type" src="img\\75544c4c8137ae3b.jpg"></li>
+<li>Name the project <img alt="Input Project Name" src="img\\6b242c8307029504.jpg">  <aside class="special"><p>The project name will be used to create a folder for the project.</p>
+</aside>
+</li>
+<li>You should get a template project with the following folder structure. <img alt="Project Created" src="img\\84813db807722c87.jpg"></li>
+<li>Now, you can run the program by clicking on the <code>Run</code> button then <code>Run Java</code> or <code>Debug Java</code>, or simply press the key <code>F5</code>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
