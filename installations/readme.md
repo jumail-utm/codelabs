@@ -4,3 +4,4 @@
 - [Install VS Code for Java Programming on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-java-installation-windows)
 - [Install VS Code and OpenCV for Python on Windows](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-opencv-python-installation-windows)
 - [Install VS Code for Java Programming with Spring Framework (on Windows)](https://jumail-utm.github.io/codelabs/installations/codelab-vscode-java_spring-installation-windows)
+- [Install Softwares using Chocolatey)](https://jumail-utm.github.io/codelabs/software-installation-on-Windows-using-chocolatey)
