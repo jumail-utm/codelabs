@@ -1,0 +1,177 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Software Installation on Windows Using Chocolatey</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelab-chocolatey-installation"
+                  title="Software Installation on Windows Using Chocolatey"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="About this Codelab" duration="1">
+        <p><strong><em>Jumail (jumail@utm.my) |  December 14, 2023</em></strong></p>
+<p>This codelab will walk you through about how to use Chocolatey installation manager to install softwares on Windows.</p>
+<aside class="warning"><p>The installation is only for Windows machine</p>
+</aside>
+<aside class="special"><ul>
+<li>Prepared by: Jumail (jumail@utm.my)</li>
+<li>Date: December 14, 2023</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Chocolatey" duration="1">
+        <p><code>Chocolatey</code> is a third-party tool. So we need to install it first.</p>
+<h2 is-upgraded>Open a Poweshell Terminal as <code>Administrator</code></h2>
+<ul>
+<li><code>Right click</code> the Windows Icon.<img alt="Windows Icon" src="img\\784bfc70cc7e235a.png"> to open Windows menu.</li>
+<li>Click on <code>Windows Powershell(Admin)</code></li>
+</ul>
+<p class="image-container"><img alt="Windows Icon" src="img\\e46cc2316257d8d7.png"></p>
+<h2 is-upgraded>Install Chocolatey</h2>
+<ul>
+<li>In the Powershell Terminal, run the following commands:<pre><code language="language-powershell" class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</code></pre>
+</li>
+<li>Test chocolatey installation<pre><code language="language-powershell" class="language-powershell">choco --version
+
+# If the chocolatey successfully installed, you should see the version.
+</code></pre>
+</li>
+</ul>
+<h2 is-upgraded>Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/install" target="_blank">Chocolatey Installation</a></li>
+<li><a href="https://community.chocolatey.org/packages" target="_blank">Find Package on Chocolatey</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of Softwares" duration="12">
+        <p>Once chocolatey got installed on your machine, next you can install you prefered softwares following the syntax:</p>
+<pre><code language="language-powershell" class="language-powershell">choco install softwareName1, softwareName2, softwareName3,... -y
+
+</code></pre>
+<p>Here is some of softwares that you may want to install:</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>Software</p>
+</td><td colspan="1" rowspan="1"><p>Software Name</p>
+</td><td colspan="1" rowspan="1"><p>Type</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Visual Studio Code</p>
+</td><td colspan="1" rowspan="1"><p><code>vscode</code></p>
+</td><td colspan="1" rowspan="1"><p>Development Tools</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Git</p>
+</td><td colspan="1" rowspan="1"><p><code>git</code></p>
+</td><td colspan="1" rowspan="1"><p>Development Tools</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Flutter SDK</p>
+</td><td colspan="1" rowspan="1"><p><code>flutter</code></p>
+</td><td colspan="1" rowspan="1"><p>Mobile App Development</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Android Studio</p>
+</td><td colspan="1" rowspan="1"><p><code>android-studio</code></p>
+</td><td colspan="1" rowspan="1"><p>Mobile App Development</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Spring Tool Suites</p>
+</td><td colspan="1" rowspan="1"><p><code>sts</code></p>
+</td><td colspan="1" rowspan="1"><p>Integrated Development</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Maven</p>
+</td><td colspan="1" rowspan="1"><p><code>maven</code></p>
+</td><td colspan="1" rowspan="1"><p>Build Automation</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>7zip</p>
+</td><td colspan="1" rowspan="1"><p><code>7zip</code></p>
+</td><td colspan="1" rowspan="1"><p>Compression Utilities</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Node.js</p>
+</td><td colspan="1" rowspan="1"><p><code>node</code></p>
+</td><td colspan="1" rowspan="1"><p>Programming</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>C++</p>
+</td><td colspan="1" rowspan="1"><p><code>mingw</code></p>
+</td><td colspan="1" rowspan="1"><p>Programming</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Java Development Kit</p>
+</td><td colspan="1" rowspan="1"><p><code>openjdk</code></p>
+</td><td colspan="1" rowspan="1"><p>Programming</p>
+</td></tr>
+</table>
+<p>Example: To install softwares for Mobile Application Development.</p>
+<pre><code language="language-powershell" class="language-powershell">choco install vscode git flutter openjdk androidstudio -y
+</code></pre>
+<aside class="warning"><h2 is-upgraded>Open A New Powershell Session</h2>
+<p>The above installations may have changed the <code>Environement Variables</code> of your system such as the <code>PATH</code>. To allow the changes to take effect, open a new powershell session.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installation of VS Code Extenstions" duration="2">
+        <p>In this step onwards, you are expected to work on the newly opened Powershell terminal. You can install VS Code Extensions from the VS Code. However, in this step we are going to do that using command-line in powershell terminal.</p>
+<h2 is-upgraded>Common Extenstions Recommended to install:</h2>
+<ul>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens <em>(Show error at coding-time)</em></li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments <em>(comments with colors)</em></li>
+<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize <em>(add semicolon)</em></li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share <em>(for collaborative coding)</em></li>
+<li><img alt="VSCode-Ext" src="img\\339ac45562ef0cfd.png">  Peacock</li>
+</ul>
+<p>Example:</p>
+<p>Run the following commands in Powershell one line at a time.</p>
+<pre><code language="language-powershell" class="language-powershell"> # Flutter
+
+ # Error Lens
+ code --install-extension PhilHindle.errorlens
+ 
+ # Pubspec Assist
+ code --install-extension jeroen-meijer.pubspec-assist
+
+ # Colonize
+ code --install-extension vmsynkov.colonize
+
+ # Better Comments
+ code --install-extension aaron-bond.better-comments
+
+ # Firebase
+ code --install-extension toba.vsfire
+ ``
+</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
