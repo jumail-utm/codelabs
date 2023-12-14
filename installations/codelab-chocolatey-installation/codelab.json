@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2023-12-14T12:08:33+08:00",
+  "id": "codelab-chocolatey-installation",
+  "duration": 16,
+  "title": "Software Installation on Windows Using Chocolatey",
+  "summary": "Chocolatey Installation",
+  "source": "chocolatey_installation.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "codelab-chocolatey-installation"
+}
